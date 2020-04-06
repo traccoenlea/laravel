@@ -20,6 +20,8 @@ class CreateOrdinateurTable extends Migration
             $table->string('processeur');
             $table->integer('taille');
             $table->integer('poids');
+            $table->integer('disque')->nullable();
+            $table->integer('sdd')->nullable();
             $table->string('graphique', 50);
             $table->integer('autonomie');
             $table->integer('ram');
