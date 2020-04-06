@@ -15,18 +15,25 @@ class CreateOrdinateurTable extends Migration
     {
         Schema::create('ordinateur', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('processeur', 50);
+            $table->string('photo');
+            $table->string('name');
+            $table->string('processeur');
             $table->integer('taille');
             $table->integer('poids');
             $table->string('graphique', 50);
             $table->integer('autonomie');
             $table->integer('ram');
-            $table->string('connectique', 50);
             $table->string('systeme', 50);
             $table->string('dalle', 50);
+            $table->integer('tactile');
             $table->string('resolution', 50);
             $table->string('marque', 50);
-            $table->timestamps();
+            $table->integer('usba');
+            $table->integer('usbc');
+            $table->integer('jack');
+            $table->integer('hdmi');
+            $table->integer('sd');
+            $table->integer('microsd');
         });
     }
 
