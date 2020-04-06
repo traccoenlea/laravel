@@ -17,6 +17,7 @@ class CreateOrdinateurTable extends Migration
             $table->increments('id');
             $table->string('photo');
             $table->string('name');
+            $table->integer('id_ordinateur');
             $table->string('processeur');
             $table->integer('taille');
             $table->integer('poids');
