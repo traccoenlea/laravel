@@ -1,55 +1,10 @@
-<style type="text/css">
-    *{
-        font-family: 'Varela Round', sans-serif;
-        margin: 0;
-        padding:0;
-    }
-
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-
-    }
-
-    h1, h2, h3{
-        padding-top: 50px;
-        padding-bottom: 50px;
-        text-align:center;
-    }
-
-
-    /*liste des ordinateurs*/
-    .ordinateurs{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-
-    /*comparateur*/
-    .comparateur{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-        .comparateur .list-item-ordi{
-            display: flex;
-        }
-
-
-
-</style>
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Comparateur d'ordi</title>
     <meta charset="utf-8">
     <!-- css ???? -->
-    <link rel="stylesheet" type="text/css" href="/public/css/app.css"> 
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <!-- bootstrapp -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
