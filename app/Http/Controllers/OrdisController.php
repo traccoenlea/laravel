@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\ordinateur;
 use Illuminate\Http\Request;
 
 class OrdisController extends Controller
@@ -10,15 +11,19 @@ class OrdisController extends Controller
 
     public function display(){
 
-    	
-    	
-        $ordis = [1=> "Ordis 1", 2=>"Ordis 2", 3=> "Ordis 3"];
+    	$ordis = ordinateur::all();
     	return view("ordis.display", ["ordis" => $ordis]);
     }
 
     public function ordinateurs($id){
-    	return view("ordis.ordinateurs", ["id" => $id]);
+    	$ordi = Ordinateur::findOrFail($id);
+    	
+    	return view("ordis.ordinateurs", ["ordi" => $ordi]);
     }
+
+    // public function ordinateurs($id){
+    // 	return view("ordis.ordinateurs", ["id" => $id]);
+    // }
 
     public function comparateur_pro(){
     	$item = [1=> "nom", 2=> "prix"];

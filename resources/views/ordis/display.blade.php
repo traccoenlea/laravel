@@ -5,8 +5,8 @@
 	<h2>Ordinateurs</h2>
 
 	<ul class="list-group list-ordis">
-		@foreach($ordis as $id => $nom)
-			<li class="list-group-item"><a href="/ordinateurs/{{$id}}">{{ $nom }}</a></li>
+		@foreach($ordis as $o)
+			<li class="list-group-item"><img src="{{$o->photo}}"><a href="/ordinateurs/{{$o->id}}">{{$o->name}}</a></li>
 		@endforeach
 	</ul>
 </div>	
