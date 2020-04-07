@@ -17,26 +17,25 @@ class CreateOrdinateurTable extends Migration
             $table->increments('id');
             $table->string('photo');
             $table->string('name');
-            $table->integer('id_ordinateur');
             $table->string('processeur');
-            $table->integer('taille');
-            $table->integer('poids');
+            $table->integer('taille')->nullable();
+            $table->integer('poids')->nullable();
             $table->integer('disque')->nullable();
             $table->integer('sdd')->nullable();
             $table->string('graphique', 50);
-            $table->integer('autonomie');
-            $table->integer('ram');
+            $table->integer('autonomie')->nullable();
+            $table->integer('ram')->nullable();
             $table->string('systeme', 50);
             $table->string('dalle', 50);
-            $table->integer('tactile');
+            $table->boolean('tactile')->nullable();
             $table->string('resolution', 50);
             $table->string('marque', 50);
-            $table->integer('usba');
-            $table->integer('usbc');
-            $table->integer('jack');
-            $table->integer('hdmi');
-            $table->integer('sd');
-            $table->integer('microsd');
+            $table->integer('usba')->nullable();
+            $table->integer('usbc')->nullable();
+            $table->integer('jack')->nullable();
+            $table->integer('hdmi')->nullable();
+            $table->integer('sd')->nullable();
+            $table->integer('microsd')->nullable();
         });
     }
 
