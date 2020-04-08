@@ -74,6 +74,7 @@ nav i{
             height: 400px;
             width: 400px;
             content: " ";
+            background-image: var(--image-src);
             background-size: 100%;
             background-repeat: no-repeat;
             background-position: center;

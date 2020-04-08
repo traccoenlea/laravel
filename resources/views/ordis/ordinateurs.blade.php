@@ -4,7 +4,7 @@
 <div class="ordinateur_presentation content">
 	<h2>{{$ordi->name}}</h2>
 	<div class="ordinateur_presentation-head">
-		<div class="ordinateur_presentation-img" style="background-image: url({{$ordi->photo}});">
+		<div class="ordinateur_presentation-img" style="--image-src: url({{$ordi->photo}})">
 		</div>
 		<div class="ordinateur_presentation-desc">
 			<ul>
