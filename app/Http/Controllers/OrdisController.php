@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\ordinateur;
+use App\Ordinateur;
 use Illuminate\Http\Request;
 
 class OrdisController extends Controller
@@ -11,7 +11,7 @@ class OrdisController extends Controller
 
     public function display(){
 
-    	$ordis = ordinateur::all();
+    	$ordis = Ordinateur::all();
     	return view("ordis.display", ["ordis" => $ordis]);
     }
 

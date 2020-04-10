@@ -7,4 +7,5 @@ Route::get('/ordinateurs', 'OrdisController@display')->name('ordi');
 Route::get('/ordinateurs/{id}' , 'OrdisController@ordinateurs')->where('id', '[0-9]+');
 
 Route::get('/comparateurPro', 'OrdisController@comparateur_pro');
-	
+
+Route::get('/search/{s}', 'SearchController@search');

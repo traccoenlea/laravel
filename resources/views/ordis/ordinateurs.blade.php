@@ -64,12 +64,12 @@
 		<div class="caracteristiques color">
 			<div class="name">Connectiques</div>
 			<div class="valeur">
-				<p>{{$ordi->usba}} port(s) USB</p>
-				<p>{{$ordi->usbc}} port(s) USB type C</p>
-				<p>{{$ordi->jack}} port(s) jack</p>
-				<p>{{$ordi->hdmi}} port(s) hdmi</p>
-				<p>{{$ordi->sd}} port(s) Sd</p>
-				<p>{{$ordi->microsd}} port(s) Microsd</p>
+				<p>{{$ordi->usba}} {{$ordi->usba <= 1  ? "port" : "ports"}} USB</p>
+				<p>{{$ordi->usbc}} {{$ordi->usbc <= 1  ? "port" : "ports"}} USB type C</p>
+				<p>{{$ordi->jack}} {{$ordi->jack <= 1  ? "port" : "ports"}} jack</p>
+				<p>{{$ordi->hdmi}} {{$ordi->hdmi <= 1  ? "port" : "ports"}} hdmi</p>
+				<p>{{$ordi->sd}} {{$ordi->sd <= 1  ? "port" : "ports"}} Sd</p>
+				<p>{{$ordi->microsd}} {{$ordi->microsd <= 1  ? "port" : "ports"}} Microsd</p>
 			</div>
 		</div>
 	</div>

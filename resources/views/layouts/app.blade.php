@@ -36,16 +36,35 @@
               <li class="nav-item">
                 <a class="nav-link" href="/ordinateurs"><i class="fas fa-desktop"></i></a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/search/{$s}"><i class="fas fa-desktop"></i></a>
+              </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <form method="POST" id="search" class="form-inline my-2 my-lg-0">
+              <input name="searchInput" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button name="search" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
           </div>
         </nav>
 
         @yield('content')
     </div>
+
+    <footer class="content"
+      style="
+        background-color: grey;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+        margin-top: 100px;
+      ">
+      footer
+    </footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
 
 </body>
 </html>
