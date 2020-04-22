@@ -18,7 +18,7 @@ class CreateOrdinateurTable extends Migration
             $table->string('photo');
             $table->string('name');
             $table->string('processeur');
-            $table->integer('taille')->nullable();
+            $table->decimal('taille')->nullable();
             $table->integer('poids')->nullable();
             $table->integer('disque')->nullable();
             $table->integer('sdd')->nullable();

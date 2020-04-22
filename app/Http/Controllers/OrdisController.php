@@ -7,12 +7,16 @@ use App\Achats;
 use App\Vendeurs;
 use Illuminate\Http\Request;
 
+// AJOUT DE LA DB ICI
+use Illuminate\Support\Facades\DB;
+
 class OrdisController extends Controller
 {	
 
     public function index()
     {
         $users = DB::table('ordinateur')->get();
+
 
         return view('ordis.ordinateurs', ['users' => $users]);
     }
@@ -27,7 +31,14 @@ class OrdisController extends Controller
     public function ordinateurs($id){
     	$ordi = Ordinateur::findOrFail($id);
         $id_ordinateur=$id;
-    	$achats = Achats::whereRaw("id_ordinateur = ?", [$id_ordinateur])->get();
+        // Copié/collé de ce que je t'ai donné
+        $achats = DB::table('vendeurs')
+            ->join('achats', 'vendeurs.id', '=', 'achats.id_vendeur')
+            ->select('vendeurs.*')
+            ->where('id_ordinateur', '=', 1)
+            ->get();
+        // commentaire de ce que tu as écrit
+//    	$achats = Achats::whereRaw("id_ordinateur = ?", [$id_ordinateur])->get();
         return view("ordis.ordinateurs", ["ordi" => $ordi, "achats"=>$achats]);
     }
 
