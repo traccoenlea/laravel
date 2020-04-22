@@ -73,6 +73,13 @@
 			</div>
 		</div>
 	</div>
+		@foreach($achats as $a)
+			<a href="{{$a->url}}">Vendeur</a>
+		@endforeach
+
+		@foreach($users as $u)
+			<a href="{{$u->id}}">ok</a>
+		@endforeach
 	
 	
 </div>

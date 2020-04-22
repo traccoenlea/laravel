@@ -3,10 +3,19 @@
 namespace App\Http\Controllers;
 
 use App\Ordinateur;
+use App\Achats;
+use App\Vendeurs;
 use Illuminate\Http\Request;
 
 class OrdisController extends Controller
 {	
+
+    public function index()
+    {
+        $users = DB::table('ordinateur')->get();
+
+        return view('ordis.ordinateurs', ['users' => $users]);
+    }
 
 
     public function display(){
@@ -17,8 +26,9 @@ class OrdisController extends Controller
 
     public function ordinateurs($id){
     	$ordi = Ordinateur::findOrFail($id);
-    	
-    	return view("ordis.ordinateurs", ["ordi" => $ordi]);
+        $id_ordinateur=$id;
+    	$achats = Achats::whereRaw("id_ordinateur = ?", [$id_ordinateur])->get();
+        return view("ordis.ordinateurs", ["ordi" => $ordi, "achats"=>$achats]);
     }
 
     // public function ordinateurs($id){
