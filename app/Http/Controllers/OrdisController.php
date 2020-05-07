@@ -51,3 +51,4 @@ class OrdisController extends Controller
     	return view("ordis.comparateur_pro", ["item" => $item]);
     }
 }
+
