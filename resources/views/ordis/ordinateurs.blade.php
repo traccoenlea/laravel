@@ -73,14 +73,11 @@
 			</div>
 		</div>
 	</div>
-		@foreach($achats as $a)
-			<a href="{{$a->url}}">Vendeur</a>
+		@foreach($ordi->vendeurs as $v)
+			<a href="{{$v->url}}">{{$v->name}}</a>
 		@endforeach
 
-		@foreach($users as $u)
-			<a href="{{$u->id}}">ok</a>
-		@endforeach
-	
+		
 	
 </div>
 

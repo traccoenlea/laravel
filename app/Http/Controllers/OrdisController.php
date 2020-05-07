@@ -31,7 +31,7 @@ class OrdisController extends Controller
     public function ordinateurs($id){
     	$ordi = Ordinateur::findOrFail($id);
         $id_ordinateur=$id;
-        // Copié/collé de ce que je t'ai donné
+        //join
         $achats = DB::table('vendeurs')
             ->join('achats', 'vendeurs.id', '=', 'achats.id_vendeur')
             ->select('vendeurs.*')
