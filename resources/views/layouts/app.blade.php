@@ -39,6 +39,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="/search/{$s}"><i class="fas fa-desktop"></i></a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/marques"><i class="fas fa-desktop"></i></a>
+              </li>
             </ul>
             <form method="POST" id="search" class="form-inline my-2 my-lg-0">
               <input name="searchInput" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">

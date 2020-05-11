@@ -74,10 +74,14 @@
 		</div>
 	</div>
 		@foreach($ordi->vendeurs as $v)
-			<a href="{{$v->url}}">{{$v->name}}</a>
+			<a href="{{$v->pivot->url}}">{{$v->name}}</a>
+			{{$v->pivot->prix}}
 		@endforeach
 
-		
+	
+
+	
+
 	
 </div>
 
