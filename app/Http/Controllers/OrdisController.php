@@ -25,7 +25,6 @@ class OrdisController extends Controller
 
     public function display()
     {
-
         $ordis = Ordinateur::all();
         return view("ordis.display", ["ordis" => $ordis]);
     }
@@ -33,21 +32,8 @@ class OrdisController extends Controller
     public function ordinateurs($id)
     {
         $ordi = Ordinateur::findOrFail($id);
-        $id_ordinateur = $id;
-        //join
-        $achats = DB::table('vendeurs')
-            ->join('achats', 'vendeurs.id', '=', 'achats.id_vendeur')
-            ->select('vendeurs.*')
-            ->where('id_ordinateur', '=', 1)
-            ->get();
-        // commentaire de ce que tu as écrit
-//    	$achats = Achats::whereRaw("id_ordinateur = ?", [$id_ordinateur])->get();
-        return view("ordis.ordinateurs", ["ordi" => $ordi, "achats" => $achats]);
+        return view("ordis.ordinateurs", ["ordi" => $ordi]);
     }
-
-    // public function ordinateurs($id){
-    // 	return view("ordis.ordinateurs", ["id" => $id]);
-    // }
 
     public function comparateur_pro()
     {

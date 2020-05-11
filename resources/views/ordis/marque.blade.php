@@ -3,7 +3,7 @@
 @section('content')
 
 <div>
-    
+    Les marques
 </div>
 
 @endsection
