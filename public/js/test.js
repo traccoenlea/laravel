@@ -16,7 +16,7 @@ $(document).ready(function () {
     //     });
     // });
 
-    $("#marque").click(function (e) {
+   /* $("#marque").click(function (e) {
         e.preventDefault();
         // var value = $(this).val();
         var value = $("#marqueTxt").val();
@@ -33,9 +33,9 @@ $(document).ready(function () {
             error: function (jqXHR, testStatus, errorThrown) {
             }
         });
-    });
+    });*/
 
-    $("#taille").click(function (e) {
+    /*$("#taille").click(function (e) {
         e.preventDefault();
         // var value = $(this).val();
         var value = $("#tailleTxt").val();
@@ -52,9 +52,9 @@ $(document).ready(function () {
             error: function (jqXHR, testStatus, errorThrown) {
             }
         });
-    });
+    });*/
 
-
+/*
     $("#addFilterBtn").click(function (e) {
         alert('on passe ici');
         e.preventDefault();
@@ -76,5 +76,5 @@ $(document).ready(function () {
                 alert('ça fonctionne pas');
             }
         });
-    });
+    });*/
 });

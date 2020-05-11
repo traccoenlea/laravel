@@ -1,5 +1,6 @@
 <?php
 
+
 namespace App\Http\Controllers;
 
 use App\Ordinateur;
@@ -11,7 +12,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class OrdisController extends Controller
-{	
+{
 
     public function index()
     {
@@ -22,15 +23,17 @@ class OrdisController extends Controller
     }
 
 
-    public function display(){
+    public function display()
+    {
 
-    	$ordis = Ordinateur::all();
-    	return view("ordis.display", ["ordis" => $ordis]);
+        $ordis = Ordinateur::all();
+        return view("ordis.display", ["ordis" => $ordis]);
     }
 
-    public function ordinateurs($id){
-    	$ordi = Ordinateur::findOrFail($id);
-        $id_ordinateur=$id;
+    public function ordinateurs($id)
+    {
+        $ordi = Ordinateur::findOrFail($id);
+        $id_ordinateur = $id;
         //join
         $achats = DB::table('vendeurs')
             ->join('achats', 'vendeurs.id', '=', 'achats.id_vendeur')
@@ -39,15 +42,31 @@ class OrdisController extends Controller
             ->get();
         // commentaire de ce que tu as écrit
 //    	$achats = Achats::whereRaw("id_ordinateur = ?", [$id_ordinateur])->get();
-        return view("ordis.ordinateurs", ["ordi" => $ordi, "achats"=>$achats]);
+        return view("ordis.ordinateurs", ["ordi" => $ordi, "achats" => $achats]);
     }
 
     // public function ordinateurs($id){
     // 	return view("ordis.ordinateurs", ["id" => $id]);
     // }
 
-    public function comparateur_pro(){
-    	$item = [1=> "nom", 2=> "prix"];
-    	return view("ordis.comparateur_pro", ["item" => $item]);
+    public function comparateur_pro()
+    {
+        $item = [1 => "nom", 2 => "prix"];
+        return view("ordis.comparateur_pro", ["item" => $item]);
+    }
+
+
+    public function helloWorld()
+    {
+        return view("ordis.comparateur_pro");
+
+    }
+
+    public function showAll($composant)
+    {
+        $sql = 'select '.$composant.' from ordinateur';
+        $elements = DB::select($sql);
+        var_dump($elements);
+        return view('ordis.comparateur_pro', ["composant" => $composant]);
     }
 }

@@ -14,11 +14,11 @@ class TestController extends Controller
         return view("test");
 
     }
-
-    public function addFilter()
-    {
-        return view('testBis');
-    }
+//
+//    public function addFilter()
+//    {
+//        return view('testBis');
+//    }
 
 
     public function showList()

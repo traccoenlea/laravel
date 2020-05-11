@@ -3,7 +3,7 @@
 @section('content')
     je suis dans l'index
 
-    <div id="filters"></div>
+   {{-- <div id="filters"></div>
     <br/>
     <a href="#" id="marque"><button id="marqueTxt" value="marque">Marque</button></a>
 
@@ -14,7 +14,7 @@
 
     <div id="listHere">
 
-    </div>
+    </div>--}}
 
 
 @endsection
