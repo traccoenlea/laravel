@@ -33,4 +33,9 @@
     <div id="listHere">
 
     </div>
+
+{{--    @foreach($elements as $element)--}}
+{{--        <div class="list-group-item">{{$element->$marque}}</div>--}}
+{{--    @endforeach--}}
+
 @endsection

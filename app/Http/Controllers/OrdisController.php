@@ -64,9 +64,15 @@ class OrdisController extends Controller
 
     public function showAll($composant)
     {
-        $sql = 'select '.$composant.' from ordinateur';
+        $sql = 'select ' . $composant . ' from ordinateur';
         $elements = DB::select($sql);
-        var_dump($elements);
-        return view('ordis.comparateur_pro', ["composant" => $composant]);
+        ?>
+        <pre>
+            <?php
+            print_r($elements);
+            ?>
+        </pre>
+        <?php
+        return view('ordis.comparateur_pro', ["element" => $elements]);
     }
 }
