@@ -13,15 +13,6 @@
 			</a>
 		@endforeach
 
-
-		@foreach($ordis as $o)
-		<div>
-			<form>
-				<input type="radio" value="{{$o->marque}}">{{$o->marque}}
-				<!-- <intut type="radio" value="{{$o->}}" -->
- 			</form>
-		</div>
-		@endforeach
 		
 	</div>
 </div>	

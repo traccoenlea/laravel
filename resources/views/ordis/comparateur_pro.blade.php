@@ -34,8 +34,13 @@
 
     </div>
 
-{{--    @foreach($elements as $element)--}}
-{{--        <div class="list-group-item">{{$element->$marque}}</div>--}}
-{{--    @endforeach--}}
+
+    @foreach($ordis as $o)
+        <div>
+            <form>
+                <input type="radio" value="{{$o->marque}}">{{$o->marque}}
+            </form>
+        </div>
+    @endforeach
 
 @endsection
