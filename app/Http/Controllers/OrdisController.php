@@ -48,17 +48,5 @@ class OrdisController extends Controller
 
     }
 
-    public function showAll($composant)
-    {
-        $sql = 'select ' . $composant . ' from ordinateur';
-        $elements = DB::select($sql);
-        ?>
-        <pre>
-            <?php
-            print_r($elements);
-            ?>
-        </pre>
-        <?php
-        return view('ordis.comparateur_pro', ["element" => $elements]);
-    }
+    
 }

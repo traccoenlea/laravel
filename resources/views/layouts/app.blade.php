@@ -37,9 +37,6 @@
                 <a class="nav-link" href="/ordinateurs"><i class="fas fa-desktop"></i></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/search/{$s}"><i class="fas fa-desktop"></i></a>
-              </li>
-              <li class="nav-item">
                 <a class="nav-link" href="/marques"><i class="fas fa-desktop"></i></a>
               </li>
             </ul>

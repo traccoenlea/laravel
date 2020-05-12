@@ -11,18 +11,7 @@
 				<div class="list-ordi-item-photo"><img src="{{$o->photo}}"></div>
 				<div class="list-ordi-item-text">{{$o->name}}</div>
 			</a>
-		@endforeach
-
-
-		@foreach($ordis as $o)
-		<div>
-			<form>
-				<input type="radio" value="{{$o->marque}}">{{$o->marque}}
-				<!-- <intut type="radio" value="{{$o->}}" -->
- 			</form>
-		</div>
-		@endforeach
-		
+		@endforeach		
 	</div>
 </div>	
 @endsection

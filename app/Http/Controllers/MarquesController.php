@@ -12,8 +12,15 @@ use Illuminate\Support\Facades\DB;
 
 class MarquesController extends Controller
 {	
-    public function display(){
-    	$marques = Vendeurs::all();
-    	return view("ordis.marque", ["marques" => $marques]);
+    public function display()
+    {
+        $ordis = Ordinateur::all();
+        return view("ordis.marque", ["ordis" => $ordis]);
+    }
+
+    public function marque($m)
+    {
+        $unemarque = Ordinateur::all()->where('marque', $m);
+        return view("ordis.unemarque", ["unemarque" => $unemarque]);
     }
 }
